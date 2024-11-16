@@ -311,7 +311,7 @@ header .header-links nav ul li a {
 }
 
 .home {
-  background-image: url("../../imgs/pages/home/home-background.png");
+  background-image: url("../imgs/pages/home/home-background.png");
   height: 100vh;
   width: 100%;
   background-size: cover;
@@ -1147,7 +1147,7 @@ header .header-links nav ul li a {
 }
 .contact .contact-content .contact-boxs .info-boxs {
   position: relative;
-  background-image: url("../../imgs/pages/contact/contact-back.jpg");
+  background-image: url("../imgs/pages/contact/contact-back.jpg");
   background-size: cover;
   padding: 50px 100px;
   z-index: 500;
