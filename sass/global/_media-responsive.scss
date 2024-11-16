@@ -1,0 +1,17 @@
+// Media Responsive Sizing in all screens
+
+@mixin screen($size) {
+  @if $size == "small" {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $size == "medium" {
+    @media (min-width: 601px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if $size == "large" {
+    @media (min-width: 769px) {
+      @content;
+    }
+  }
+}

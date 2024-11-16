@@ -1,0 +1,131 @@
+@use "../global/themes" as *;
+@use "../global/global" as *;
+@use "../global/media-responsive" as *;
+
+.home {
+  background-image: url("../../imgs/pages/home/home-background.png");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  .home-content {
+    z-index: 100;
+    .home__title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      span {
+        .first__name {
+          color: var(--custom-color);
+        }
+        font-size: 60px;
+        font-weight: bold;
+        @include screen("small") {
+          font-size: 40px;
+        }
+      }
+    }
+    .title__job {
+      .job {
+        color: var(--custom-color);
+      }
+      span {
+        font-size: 30px;
+        text-align: center;
+        font-weight: normal;
+        padding-top: 10px;
+        @include screen("small") {
+          font-size: 25px;
+        }
+      }
+    }
+    .home-links-first {
+      display: flex;
+      position: absolute;
+      top: 40%;
+      left: 5%;
+      @include screen("small") {
+        position: absolute;
+        justify-content: center;
+        left: 30%;
+        top: 94%;
+        height: 50px;
+      }
+      @include screen("medium") {
+        position: absolute;
+        justify-content: center;
+        left: 35%;
+        top: 90%;
+        height: 60px;
+      }
+      nav {
+        ul {
+          @include screen("small") {
+            display: flex;
+            gap: 40px;
+          }
+          @include screen("medium") {
+            display: flex;
+            gap: 40px;
+          }
+          li {
+            padding-bottom: 20px;
+            a {
+              font-size: 22px;
+              color: white;
+              opacity: 0.6;
+              &:hover {
+                opacity: 1;
+                transition: all 0.4s ease-in;
+                -webkit-transition: all 0.4s ease-in;
+                -moz-transition: all 0.4s ease-in;
+                -ms-transition: all 0.4s ease-in;
+                -o-transition: all 0.4s ease-in;
+              }
+            }
+          }
+        }
+      }
+    }
+    .home-links-second {
+      display: flex;
+      padding-right: 30px;
+      position: absolute;
+      top: 45%;
+      right: 3%;
+      @include screen("medium") {
+        display: none;
+      }
+      @include screen("small") {
+        display: none;
+      }
+      nav {
+        ul {
+          li {
+            padding-bottom: 40px;
+            a {
+              font-size: 22px;
+              color: white;
+              opacity: 0.6;
+              &:hover {
+                opacity: 1;
+                transition: all 0.4s ease-in;
+                -webkit-transition: all 0.4s ease-in;
+                -moz-transition: all 0.4s ease-in;
+                -ms-transition: all 0.4s ease-in;
+                -o-transition: all 0.4s ease-in;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

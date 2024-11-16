@@ -1,0 +1,246 @@
+@use "../global/themes" as *;
+@use "../global/global" as *;
+@use "../global/media-responsive" as *;
+
+.about {
+  .section-head {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    color: white;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    @include screen("medium") {
+      top: 8%;
+    }
+    @include screen("small") {
+      top: 13%;
+    }
+    h1 {
+      font-size: 55px;
+      text-transform: capitalize;
+      font-weight: normal;
+      @include screen("small") {
+        font-size: 35px;
+      }
+      span {
+        color: var(--custom-color);
+      }
+    }
+    p {
+      text-transform: capitalize;
+      text-align: center;
+      opacity: 0.8;
+      font-size: 22px;
+      padding-top: 10px;
+      @include screen("small") {
+        font-size: 18px;
+      }
+      span {
+        text-transform: lowercase;
+        color: var(--custom-color);
+      }
+    }
+  }
+  .about-content {
+    margin-top: 150px;
+    padding: 0 40px;
+    color: white;
+    overflow: hidden;
+    @include screen("small") {
+      padding: 0 10px;
+    }
+    .about-part {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      gap: 100px;
+      @include screen("small") {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+      }
+      @include screen("medium") {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 30px;
+      }
+
+      .about-infs {
+        h1 {
+          color: white;
+          font-size: 45px;
+          line-height: 1.4;
+          @include screen("small") {
+            font-size: 35px;
+          }
+          span {
+            color: var(--custom-color);
+          }
+        }
+        p {
+          color: white;
+          opacity: 0.8;
+          font-size: 22px;
+          padding-top: 40px;
+        }
+        .about-download {
+          text-align: center;
+          margin-top: 50px;
+          a {
+            color: white;
+            background-color: var(--custom-color);
+            padding: 18px 40px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            font-weight: bold;
+            font-size: 18px;
+          }
+        }
+      }
+      .about-img {
+        @include screen("medium") {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        @include screen("large") {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        img {
+          width: 450px;
+          height: 350px;
+          @include screen("small") {
+            width: 300px;
+            height: 250px;
+          }
+          @include screen("medium") {
+            width: 500px;
+            height: 350px;
+          }
+        }
+      }
+    }
+    .service-part {
+      margin-bottom: 50px;
+      .service__title {
+        text-align: center;
+        font-size: 50px;
+        margin-top: 100px;
+        @include screen("small") {
+          font-size: 40px;
+        }
+        span {
+          color: var(--custom-color);
+        }
+      }
+      .service-boxs {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 40px;
+        .service-box {
+          background-color: #191919;
+          text-align: center;
+          padding: 40px;
+          &:hover {
+            background-color: var(--custom-color);
+            transition: all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+            -moz-transition: all 0.4s ease-in-out;
+            -ms-transition: all 0.4s ease-in-out;
+            -o-transition: all 0.4s ease-in-out;
+          }
+          i {
+            font-size: 60px;
+            background-color: var(--custom-color);
+            width: 100px;
+            height: 90px;
+            border-radius: 25px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            -o-border-radius: 25px;
+            margin-bottom: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+          }
+          h2 {
+            font-size: 30px;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+          }
+          p {
+            font-size: 19px;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    .skills-part {
+      .skills__title {
+        text-align: center;
+        font-size: 50px;
+        margin-top: 100px;
+        @include screen("small") {
+          font-size: 40px;
+        }
+        span {
+          color: var(--custom-color);
+        }
+      }
+      .skills-boxs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        margin-top: 50px;
+        margin-bottom: 100px;
+        gap: 0 60px;
+        .skills-range {
+          margin: 25px 0;
+          .skill-label {
+            font-weight: bold;
+            font-size: 18px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            opacity: 0.8;
+          }
+          .skill-bar {
+            width: 100%;
+            background-color: #191919;
+            border-radius: 10px;
+            overflow: hidden;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            @include screen("small") {
+              width: 80%;
+            }
+          }
+          .skill-bar div {
+            height: 30px;
+            background-color: var(--custom-color);
+            width: 80%;
+            padding-right: 10px;
+            color: white;
+            line-height: 25px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 18px;
+            @include screen("small") {
+              height: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+@use "../global/themes" as *;
+@use "../global/global" as *;
+@use "../global/media-responsive" as *;
+
+header {
+  .logo {
+    padding-top: 15px;
+    img {
+      width: 80px;
+      height: 80px;
+      &:hover {
+        transform: rotate(-40deg);
+        -webkit-transform: rotate(-40deg);
+        -moz-transform: rotate(-40deg);
+        -ms-transform: rotate(-40deg);
+        -o-transform: rotate(-40deg);
+        transition: all 0.3s ease-in;
+        -webkit-transition: all 0.3s ease-in;
+        -moz-transition: all 0.3s ease-in;
+        -ms-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+      }
+    }
+  }
+  .bar-home {
+    width: 80px;
+    height: 40px;
+    &:hover {
+      cursor: pointer;
+    }
+    position: relative;
+    margin-top: 40px;
+    .first-bar {
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: white;
+      top: 0;
+      right: 15px;
+      &:hover {
+        width: 40px;
+      }
+    }
+    .second-bar {
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background-color: white;
+      top: 10px;
+      right: 15px;
+      &:hover {
+        width: 40px;
+      }
+    }
+    .third-bar {
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      background-color: white;
+      top: 20px;
+      right: 15px;
+    }
+  }
+  .fa-xmark {
+    color: white;
+    font-size: 60px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  .header-links {
+    position: relative;
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 200px);
+    nav {
+      ul {
+        li {
+          padding-top: 30px;
+          text-align: center;
+          a {
+            z-index: 100;
+            color: white;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home__page:hover + .home__link {
+  display: block;
+}
+
+.about__page:hover + .about__link {
+  display: block;
+}
+
+.blog__page:hover + .blog__link {
+  display: block;
+}
+
+.portfolio__page:hover + .portfolio__link {
+  display: block;
+}
+
+.contact__page:hover + .contact__link {
+  display: block;
+}
+
+.link-edit {
+  display: none;
+  position: absolute;
+  color: white;
+  font-size: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1;
+  text-transform: uppercase;
+  z-index: 0;
+  @include screen("small") {
+    font-size: 70px;
+  }
+  @include screen("medium") {
+    font-size: 120px;
+  }
+}

@@ -1,0 +1,116 @@
+@use "../global/themes" as *;
+@use "../global/global" as *;
+@use "../global/media-responsive" as *;
+
+.blog {
+  color: white;
+  .blog-head {
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    transform: translate(-50%, -50%);
+    color: white;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    @include screen("medium") {
+      top: 8%;
+    }
+    @include screen("small") {
+      top: 13%;
+    }
+    h1 {
+      font-size: 55px;
+      text-transform: capitalize;
+      text-align: center;
+      @include screen("small") {
+        font-size: 45px;
+      }
+    }
+    p {
+      font-size: 22px;
+      margin-top: 15px;
+      opacity: 0.8;
+      @include screen("small") {
+        font-size: 18px;
+      }
+      span {
+        color: var(--custom-color);
+      }
+    }
+  }
+  .blog-content {
+    margin-top: 150px;
+    padding: 0 40px;
+    overflow: hidden;
+    @include screen("small") {
+      padding: 0 10px;
+      margin-top: 100px;
+    }
+    .blog-boxs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      gap: 50px;
+      margin-bottom: 100px;
+      @include screen("small") {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+      .blog-box {
+        &:hover {
+          @include screen("large") {
+            .blog-img {
+              img {
+                height: 100px;
+              }
+            }
+            p {
+              display: block;
+            }
+          }
+          transition: all 0.5s ease-in;
+          -webkit-transition: all 0.5s ease-in;
+          -moz-transition: all 0.5s ease-in;
+          -ms-transition: all 0.5s ease-in;
+          -o-transition: all 0.5s ease-in;
+        }
+        background-color: #050505;
+        .blog-img {
+          img {
+            width: 100%;
+            height: 200px;
+          }
+        }
+        .post-date {
+          background-color: var(--custom-color);
+          padding: 5px 20px;
+          font-size: 20px;
+          position: relative;
+          top: -30px;
+        }
+        h1 {
+          text-align: center;
+          font-size: 32px;
+          @include screen("large") {
+            padding-bottom: 40px;
+          }
+          @include screen("small") {
+            font-size: 25px;
+          }
+        }
+        p {
+          text-align: center;
+          opacity: 0.8;
+          font-size: 20px;
+          padding: 40px;
+          @include screen("small") {
+            padding: 20px;
+          }
+          @include screen("large") {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
