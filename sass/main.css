@@ -1070,13 +1070,13 @@ header .header-links nav ul li a {
 .contact {
   color: white;
 }
-.contact .contact-section::before {
+.contact::before {
   content: "";
   position: absolute;
-  height: 100vh;
   width: 100%;
-  left: 0;
+  height: 100%;
   top: 0;
+  left: 0;
   animation-name: sectionLoad;
   animation-duration: 1.5s;
   animation-timing-function: linear;
