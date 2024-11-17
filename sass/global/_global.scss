@@ -176,3 +176,14 @@ footer {
     -o-transform: rotate(360deg);
   }
 }
+
+@keyframes sectionLoad {
+  0% {
+    background-color: var(--custom-color);
+    z-index: 10000;
+  }
+  100% {
+    background-color: var(--custom-color);
+    z-index: 0;
+  }
+}

@@ -4,6 +4,19 @@
 
 .contact {
   color: white;
+  .contact-section {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      left: 0;
+      top: 0;
+      animation-name: sectionLoad;
+      animation-duration: 1.5s;
+      animation-timing-function: linear;
+    }
+  }
   .contact-head {
     position: absolute;
     left: 50%;

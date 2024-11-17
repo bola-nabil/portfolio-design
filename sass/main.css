@@ -178,7 +178,25 @@ footer p {
     -o-transform: rotate(360deg);
   }
 }
+@keyframes sectionLoad {
+  0% {
+    background-color: var(--custom-color);
+    z-index: 10000;
+  }
+  100% {
+    background-color: var(--custom-color);
+    z-index: 0;
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
 header .logo {
+  z-index: 2000;
   padding-top: 15px;
 }
 header .logo img {
@@ -197,9 +215,15 @@ header .logo img:hover {
   -ms-transition: all 0.3s ease-in;
   -o-transition: all 0.3s ease-in;
 }
+@media (max-width: 600px) {
+  header .logo img {
+    display: none;
+  }
+}
 header .bar-home {
   width: 80px;
   height: 40px;
+  z-index: 1;
   position: relative;
   margin-top: 40px;
 }
@@ -341,14 +365,17 @@ header .header-links nav ul li a {
 }
 @media (max-width: 600px) {
   .home .home-content .home__title span {
-    font-size: 40px;
+    font-size: 35px;
   }
+}
+.home .home-content .title__job {
+  padding-top: 30px;
 }
 .home .home-content .title__job .job {
   color: var(--custom-color);
 }
 .home .home-content .title__job span {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   font-weight: normal;
   padding-top: 10px;
@@ -368,8 +395,8 @@ header .header-links nav ul li a {
   .home .home-content .home-links-first {
     position: absolute;
     justify-content: center;
-    left: 30%;
-    top: 94%;
+    left: 25%;
+    top: 90%;
     height: 50px;
   }
 }
@@ -444,6 +471,17 @@ header .header-links nav ul li a {
   -o-transition: all 0.4s ease-in;
 }
 
+.about .about-section::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  animation-name: sectionLoad;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+}
 .about .section-head {
   position: absolute;
   left: 50%;
@@ -495,6 +533,7 @@ header .header-links nav ul li a {
   color: var(--custom-color);
 }
 .about .about-content {
+  position: relative;
   margin-top: 150px;
   padding: 0 40px;
   color: white;
@@ -713,6 +752,17 @@ header .header-links nav ul li a {
 .blog {
   color: white;
 }
+.blog .blog-section::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  animation-name: sectionLoad;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+}
 .blog .blog-head {
   position: absolute;
   left: 50%;
@@ -841,6 +891,17 @@ header .header-links nav ul li a {
 
 .portfolio {
   color: white;
+}
+.portfolio .portfolio-section::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  animation-name: sectionLoad;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
 }
 .portfolio .portfolio-head {
   position: absolute;
@@ -1000,6 +1061,17 @@ header .header-links nav ul li a {
 
 .contact {
   color: white;
+}
+.contact .contact-section::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  animation-name: sectionLoad;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
 }
 .contact .contact-head {
   position: absolute;

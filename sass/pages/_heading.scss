@@ -3,7 +3,13 @@
 @use "../global/media-responsive" as *;
 
 header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
   .logo {
+    z-index: 2000;
     padding-top: 15px;
     img {
       width: 80px;
@@ -20,11 +26,15 @@ header {
         -ms-transition: all 0.3s ease-in;
         -o-transition: all 0.3s ease-in;
       }
+      @include screen("small") {
+        display: none;
+      }
     }
   }
   .bar-home {
     width: 80px;
     height: 40px;
+    z-index: 1;
     &:hover {
       cursor: pointer;
     }

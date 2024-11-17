@@ -1,17 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   fetch("header.html") // Fetches the header file
-//     .then((response) => {
-//       if (!response.ok) throw new Error("Network response was not ok.");
-//       return response.text(); // Parses the response as text
-//     })
-//     .then((data) => {
-//       document.getElementById("header-placeholder").innerHTML = data; // Inserts header HTML
-//     })
-//     .catch((error) =>
-//       console.error("There was a problem with the fetch operation:", error)
-//     );
-// });
-
 // header & home
 const barHome = document.getElementById("bar-home");
 const headerLinks = document.querySelectorAll(".header-links nav ul")[0];
@@ -24,8 +10,7 @@ const blogSection = document.getElementById("blog-section");
 const portfolioSection = document.getElementById("portfolio-section");
 const contactSection = document.getElementById("contact-section");
 const pageTitle = document.querySelector("title").innerText;
-
-console.log(pageTitle);
+const logoImage = document.getElementById("main-logo");
 
 barHome.style.display = "block";
 headerLinks.style.display = "none";
@@ -34,6 +19,7 @@ headerLinksPart.classList.add("hidden");
 
 barHome.addEventListener("click", function () {
   headerLinks.style.display = "block";
+  logoImage.style.display = "block";
   barHome.style.display = "none";
   exitIcon.style.display = "block";
   if (pageTitle === "Protfolio Project") {
@@ -86,9 +72,6 @@ exitIcon.addEventListener("click", function () {
 
 //chane colors;
 const colorOptions = document.querySelectorAll(".color-option");
-const text = document.querySelectorAll(".text");
-
-console.log(text);
 const savedColor = sessionStorage.getItem("selectedColor");
 
 if (savedColor) {

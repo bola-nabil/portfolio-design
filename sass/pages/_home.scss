@@ -28,16 +28,17 @@
         font-size: 60px;
         font-weight: bold;
         @include screen("small") {
-          font-size: 40px;
+          font-size: 35px;
         }
       }
     }
     .title__job {
+      padding-top: 30px;
       .job {
         color: var(--custom-color);
       }
       span {
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
         font-weight: normal;
         padding-top: 10px;
@@ -54,8 +55,8 @@
       @include screen("small") {
         position: absolute;
         justify-content: center;
-        left: 30%;
-        top: 94%;
+        left: 25%;
+        top: 90%;
         height: 50px;
       }
       @include screen("medium") {

@@ -3,6 +3,19 @@
 @use "../global/media-responsive" as *;
 
 .about {
+  .about-section {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      left: 0;
+      top: 0;
+      animation-name: sectionLoad;
+      animation-duration: 1.5s;
+      animation-timing-function: linear;
+    }
+  }
   .section-head {
     position: absolute;
     left: 50%;
@@ -46,6 +59,7 @@
     }
   }
   .about-content {
+    position: relative;
     margin-top: 150px;
     padding: 0 40px;
     color: white;
