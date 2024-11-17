@@ -54,12 +54,13 @@
     }
   }
   .blog-content {
-    margin-top: 150px;
+    position: relative;
+    margin-top: 300px;
     padding: 0 40px;
     overflow: hidden;
     @include screen("small") {
       padding: 0 10px;
-      margin-top: 100px;
+      margin-top: 200px;
     }
     .blog-boxs {
       display: grid;

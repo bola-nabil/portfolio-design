@@ -22,7 +22,7 @@ barHome.addEventListener("click", function () {
   logoImage.style.display = "block";
   barHome.style.display = "none";
   exitIcon.style.display = "block";
-  if (pageTitle === "Protfolio Project") {
+  if (pageTitle === "Portfolio Project") {
     homeSection.style.backgroundImage = "none";
     homeSection.style.backgroundColor = "#101010";
     homeContent.classList.add("hidden");
@@ -47,7 +47,7 @@ exitIcon.addEventListener("click", function () {
   headerLinks.style.display = "none";
   barHome.style.display = "block";
   exitIcon.style.display = "none";
-  if (pageTitle === "Protfolio Project") {
+  if (pageTitle === "Portfolio Project") {
     homeContent.classList.remove("hidden");
     homeSection.style.backgroundImage =
       "url('./imgs/pages/home/home-background.png')";

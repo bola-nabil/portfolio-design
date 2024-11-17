@@ -4,6 +4,7 @@
 
 .contact {
   color: white;
+
   .contact-section {
     &::before {
       content: "";
@@ -58,12 +59,14 @@
     }
   }
   .contact-content {
-    margin-top: 150px;
+    position: relative;
+    margin-top: 300px;
     padding: 0 40px;
     overflow: hidden;
+    margin-bottom: 100px;
     @include screen("small") {
       padding: 0 10px;
-      margin-top: 100px;
+      margin-top: 200px;
     }
     .contact-boxs {
       display: grid;
@@ -78,7 +81,7 @@
           text-align: center;
           text-transform: capitalize;
           font-size: 30px;
-          margin-bottom: 20px;
+          margin-bottom: 30px;
           opacity: 0.8;
         }
         .first__input {
@@ -153,7 +156,7 @@
         padding: 50px 100px;
         z-index: 500;
         @include screen("small") {
-          padding: 50px;
+          padding: 40px;
         }
         &::before {
           content: "";

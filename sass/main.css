@@ -90,6 +90,12 @@ a {
   -o-transform: translate(-50%, -50%);
 }
 
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
 footer p {
   color: white;
   text-align: center;
@@ -534,7 +540,7 @@ header .header-links nav ul li a {
 }
 .about .about-content {
   position: relative;
-  margin-top: 150px;
+  margin-top: 300px;
   padding: 0 40px;
   color: white;
   overflow: hidden;
@@ -542,6 +548,7 @@ header .header-links nav ul li a {
 @media (max-width: 600px) {
   .about .about-content {
     padding: 0 10px;
+    margin-top: 200px;
   }
 }
 .about .about-content .about-part {
@@ -808,14 +815,15 @@ header .header-links nav ul li a {
   color: var(--custom-color);
 }
 .blog .blog-content {
-  margin-top: 150px;
+  position: relative;
+  margin-top: 300px;
   padding: 0 40px;
   overflow: hidden;
 }
 @media (max-width: 600px) {
   .blog .blog-content {
     padding: 0 10px;
-    margin-top: 100px;
+    margin-top: 200px;
   }
 }
 .blog .blog-content .blog-boxs {
@@ -952,14 +960,14 @@ header .header-links nav ul li a {
   color: var(--custom-color);
 }
 .portfolio .portfolio-content {
-  margin-top: 150px;
+  margin-top: 300px;
   padding: 0 100px;
   overflow: hidden;
 }
 @media (max-width: 600px) {
   .portfolio .portfolio-content {
     padding: 0 10px;
-    margin-top: 100px;
+    margin-top: 200px;
   }
 }
 .portfolio .portfolio-content .portfolio-boxs {
@@ -1122,14 +1130,16 @@ header .header-links nav ul li a {
   color: var(--custom-color);
 }
 .contact .contact-content {
-  margin-top: 150px;
+  position: relative;
+  margin-top: 300px;
   padding: 0 40px;
   overflow: hidden;
+  margin-bottom: 100px;
 }
 @media (max-width: 600px) {
   .contact .contact-content {
     padding: 0 10px;
-    margin-top: 100px;
+    margin-top: 200px;
   }
 }
 .contact .contact-content .contact-boxs {
@@ -1147,7 +1157,7 @@ header .header-links nav ul li a {
   text-align: center;
   text-transform: capitalize;
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   opacity: 0.8;
 }
 .contact .contact-content .contact-boxs .form-box .first__input {
@@ -1226,7 +1236,7 @@ header .header-links nav ul li a {
 }
 @media (max-width: 600px) {
   .contact .contact-content .contact-boxs .info-boxs {
-    padding: 50px;
+    padding: 40px;
   }
 }
 .contact .contact-content .contact-boxs .info-boxs::before {

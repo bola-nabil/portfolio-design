@@ -60,12 +60,13 @@
   }
   .about-content {
     position: relative;
-    margin-top: 150px;
+    margin-top: 300px;
     padding: 0 40px;
     color: white;
     overflow: hidden;
     @include screen("small") {
       padding: 0 10px;
+      margin-top: 200px;
     }
     .about-part {
       display: grid;
